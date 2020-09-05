@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Retinal disease Detected</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            font: 20px Montserrat, sans-serif;
+            line-height: 1.8;
+            padding-top: 30px;
+            -ms-overflow-style: navbar !important;
+            color: #f5f6f7;
+        }
+
+        .inline {
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        p {
+            font-size: 16px;
+        }
+
+        .margin {
+            margin-bottom: 15px;
+        }
+
+        .bg-1 {
+            background-color: #1abc9c;
+            /* Green */
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            background-color: #474e5d;
+            /* Dark Blue */
+            color: #ffffff;
+        }
+
+        .bg-3 {
+            background-color: #ffffff;
+            /* White */
+            color: #555555;
+        }
+
+        .bg-4 {
+            background-color: #2f2f2f;
+            /* Black Gray */
+            color: #fff;
+        }
+
+        .avatar {
+            width: 30px;
+            height: 28px;
+            border-radius: 10px;
+        }
+
+        #footer-area {
+            padding: 20px 0 20px 0;
+            background: #262626;
+            color: #fff;
+        }
+
+        .single-footer h3 {
+            margin-bottom: 15px;
+            color: #fafafa;
+        }
+
+        .footer-social li a {
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+        }
+
+        .fa {
+            font-size: 30px;
+            width: 30px;
+            text-align: center;
+            color: black;
+            border-radius: 50%;
+        }
+
+
+        .container-fluid {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .container-fluid1 {
+            height: auto;
+            padding-top: 100px;
+            padding-bottom: 15px;
+        }
+
+        .container-fluid2 {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 10px;
+        }
+
+        .container-fluids {
+            height: auto;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-left: 5px;
+            border-right: 5px;
+        }
+
+        #cent {
+            text-align: center;
+            margin: auto;
+        }
+
+        input[type=file] {
+            display: inline-block;
+        }
+
+        .navbar li:hover,
+        :focus {
+            background-color: #fff;
+            color: green;
+            text-decoration: underline;
+        }
+
+        .navbar {
+            padding-top: 15px;
+            padding-bottom: 15px;
+            border: 0;
+            border-radius: 0;
+            margin-bottom: 0;
+            font-size: 12px;
+            letter-spacing: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar-default bg-dark navbar-dark navbar-fixed-top">
+        <div class="container-fluids" style="color:black;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" style="font-size: xx-large;font-weight: bolder;color: black;">Retina</a>
+                
+            </div>
+            
+        </div>
+    </nav>
+
+    <!-- Second Container -->
+    <div class="container-fluid bg-2"
+        style="background-repeat: repeat;background-blend-mode: soft-light;background-size:cover;background-clip: border-box;background-image:url(../static/img/eye.png)">
+        <br>
+        <h3
+            style="font-size: 45px;font-weight: bold; color:floralwhite;text-align: center;text-decoration-color: tomato;">
+            {{msg}}  {{result}}</h4>
+            <br>
+            <h>{{Error}}</h>
+    </div>
+    <br>
+    <div class="container bg-3" style="color: black;text-align: justify;">
+        <div class="row">
+            <br>
+            <div class="col-md-5" style="text-align: center;">
+                <img src="{{ url_for('send_file1', filename=filee)}}" class="img-responsive"
+                    style="width: 100%;height: 300px;border-radius: 10px;outline-color: black;" alt="Image">
+                <br>
+                
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-center">
+            <a type="button" class="btn"
+            style="border-radius: 10px;widows: 100%;border-color: green;color:black;background-color: white;font-weight: bolder;"
+            href="{{ url_for('index') }}">
+            Try With Other Image</a>
+    </div>
+</body>
+
+</html>
